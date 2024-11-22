@@ -18,9 +18,9 @@ contract ProposalVote{
     Proposal[] public proposals;
 
     //events
-    event ProposalCreated(string indexed name, uint16 quorum);
-    event ProposalApproved(string indexed name, uint count);
-    event ProposalActive(string indexed name, uint count);
+    event ProposalCreated(string name, uint16 quorum);
+    event ProposalApproved(string name, uint count);
+    event ProposalActive(string name, uint count);
 
     function createProposal(string memory _name, string memory _desc, uint16 _quorum) external  {
         require(msg.sender != address(0), "Zero address not allowed" );
